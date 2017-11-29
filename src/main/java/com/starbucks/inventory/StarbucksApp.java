@@ -24,18 +24,18 @@ import java.util.Collection;
 @ComponentScan
 @EnableAutoConfiguration(exclude = {MetricFilterAutoConfiguration.class, MetricRepositoryAutoConfiguration.class})
 @EnableConfigurationProperties({LiquibaseProperties.class, ApplicationProperties.class})
-public class InventoryApp {
+public class StarbucksApp {
 
-    private static final Logger log = LoggerFactory.getLogger(InventoryApp.class);
+    private static final Logger log = LoggerFactory.getLogger(StarbucksApp.class);
 
     private final Environment env;
 
-    public InventoryApp(Environment env) {
+    public StarbucksApp(Environment env) {
         this.env = env;
     }
 
     /**
-     * Initializes inventory.
+     * Initializes starbucks.
      * <p>
      * Spring profiles can be configured with a program arguments --spring.profiles.active=your-active-profile
      * <p>
@@ -61,7 +61,7 @@ public class InventoryApp {
      * @throws UnknownHostException if the local host name could not be resolved into an address
      */
     public static void main(String[] args) throws UnknownHostException {
-        SpringApplication app = new SpringApplication(InventoryApp.class);
+        SpringApplication app = new SpringApplication(StarbucksApp.class);
         DefaultProfileUtil.addDefaultProfile(app);
         Environment env = app.run(args).getEnvironment();
         String protocol = "http";

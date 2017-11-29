@@ -2,7 +2,7 @@ import { NgModule, LOCALE_ID } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 
 import {
-    InventorySharedLibsModule,
+    StarbucksSharedLibsModule,
     JhiLanguageHelper,
     FindLanguageFromKeyPipe,
     JhiAlertComponent,
@@ -11,7 +11,7 @@ import {
 
 @NgModule({
     imports: [
-        InventorySharedLibsModule
+        StarbucksSharedLibsModule
     ],
     declarations: [
         FindLanguageFromKeyPipe,
@@ -27,10 +27,10 @@ import {
         },
     ],
     exports: [
-        InventorySharedLibsModule,
+        StarbucksSharedLibsModule,
         FindLanguageFromKeyPipe,
         JhiAlertComponent,
         JhiAlertErrorComponent
     ]
 })
-export class InventorySharedCommonModule {}
+export class StarbucksSharedCommonModule {}

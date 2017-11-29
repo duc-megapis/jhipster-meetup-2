@@ -1,6 +1,6 @@
 package com.starbucks.inventory.web.rest.errors;
 
-import com.starbucks.inventory.InventoryApp;
+import com.starbucks.inventory.StarbucksApp;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -25,7 +25,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @see ExceptionTranslator
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = InventoryApp.class)
+@SpringBootTest(classes = StarbucksApp.class)
 public class ExceptionTranslatorIntTest {
 
     @Autowired

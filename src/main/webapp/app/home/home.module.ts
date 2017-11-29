@@ -1,14 +1,14 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { InventorySharedModule } from '../shared';
+import { StarbucksSharedModule } from '../shared';
 
 import { HOME_ROUTE, HomeComponent } from './';
 
 @NgModule({
     imports: [
-        InventorySharedModule,
-        RouterModule.forRoot([ HOME_ROUTE ], { useHash: true })
+        StarbucksSharedModule,
+        RouterModule.forChild([ HOME_ROUTE ])
     ],
     declarations: [
         HomeComponent,
@@ -19,4 +19,4 @@ import { HOME_ROUTE, HomeComponent } from './';
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class InventoryHomeModule {}
+export class StarbucksHomeModule {}

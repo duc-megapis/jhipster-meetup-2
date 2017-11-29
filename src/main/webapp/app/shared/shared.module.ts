@@ -2,8 +2,8 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { DatePipe } from '@angular/common';
 
 import {
-    InventorySharedLibsModule,
-    InventorySharedCommonModule,
+    StarbucksSharedLibsModule,
+    StarbucksSharedCommonModule,
     CSRFService,
     AuthServerProvider,
     AccountService,
@@ -18,8 +18,8 @@ import {
 
 @NgModule({
     imports: [
-        InventorySharedLibsModule,
-        InventorySharedCommonModule
+        StarbucksSharedLibsModule,
+        StarbucksSharedCommonModule
     ],
     declarations: [
         JhiLoginModalComponent,
@@ -38,7 +38,7 @@ import {
     ],
     entryComponents: [JhiLoginModalComponent],
     exports: [
-        InventorySharedCommonModule,
+        StarbucksSharedCommonModule,
         JhiLoginModalComponent,
         HasAnyAuthorityDirective,
         DatePipe
@@ -46,4 +46,4 @@ import {
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 
 })
-export class InventorySharedModule {}
+export class StarbucksSharedModule {}

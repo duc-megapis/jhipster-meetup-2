@@ -1,6 +1,6 @@
 package com.starbucks.inventory.web.rest;
 
-import com.starbucks.inventory.InventoryApp;
+import com.starbucks.inventory.StarbucksApp;
 import com.starbucks.inventory.web.rest.vm.LoggerVM;
 import ch.qos.logback.classic.AsyncAppender;
 import ch.qos.logback.classic.LoggerContext;
@@ -27,7 +27,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @see LogsResource
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = InventoryApp.class)
+@SpringBootTest(classes = StarbucksApp.class)
 public class LogsResourceIntTest {
 
     private MockMvc restLogsMockMvc;

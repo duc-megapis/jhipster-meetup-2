@@ -26,8 +26,8 @@ spring:
         serialization.indent_output: true
     datasource:
         type: com.zaxxer.hikari.HikariDataSource
-        url: jdbc:h2:file:./target/h2db/db/inventory;DB_CLOSE_DELAY=-1
-        username: inventory
+        url: jdbc:h2:file:./target/h2db/db/starbucks;DB_CLOSE_DELAY=-1
+        username: starbucks
         password:
     h2:
         console:
@@ -57,7 +57,7 @@ liquibase:
 
 # ===================================================================
 # To enable SSL, generate a certificate using:
-# keytool -genkey -alias inventory -storetype PKCS12 -keyalg RSA -keysize 2048 -keystore keystore.p12 -validity 3650
+# keytool -genkey -alias starbucks -storetype PKCS12 -keyalg RSA -keysize 2048 -keystore keystore.p12 -validity 3650
 #
 # You can also use Let's Encrypt:
 # https://maximilian-boehm.com/hp2121/Create-a-Java-Keystore-JKS-from-Let-s-Encrypt-Certificates.htm
@@ -69,8 +69,8 @@ liquibase:
 #    ssl:
 #        key-store: keystore.p12
 #        key-store-password: <your-password>
-#        keyStoreType: PKCS12
-#        keyAlias: inventory
+#        key-store-type: PKCS12
+#        key-alias: starbucks
 # ===================================================================
 server:
     port: 8080
@@ -104,7 +104,7 @@ jhipster:
                 token-validity-in-seconds: 86400
                 token-validity-in-seconds-for-remember-me: 2592000
     mail: # specific JHipster mail property, for standard properties see MailProperties
-        from: inventory@localhost
+        from: starbucks@localhost
         base-url: http://127.0.0.1:8080
     metrics: # DropWizard Metrics configuration, used by MetricsConfiguration
         jmx.enabled: true
@@ -112,7 +112,7 @@ jhipster:
             enabled: false
             host: localhost
             port: 2003
-            prefix: inventory
+            prefix: starbucks
         prometheus: # Use the "prometheus" Maven profile to have the Prometheus dependencies
             enabled: false
             endpoint: /prometheusMetrics

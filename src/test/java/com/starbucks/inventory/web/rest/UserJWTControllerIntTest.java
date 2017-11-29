@@ -1,6 +1,6 @@
 package com.starbucks.inventory.web.rest;
 
-import com.starbucks.inventory.InventoryApp;
+import com.starbucks.inventory.StarbucksApp;
 import com.starbucks.inventory.domain.User;
 import com.starbucks.inventory.repository.UserRepository;
 import com.starbucks.inventory.security.jwt.TokenProvider;
@@ -32,7 +32,7 @@ import static org.hamcrest.Matchers.not;
  * @see UserJWTController
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = InventoryApp.class)
+@SpringBootTest(classes = StarbucksApp.class)
 public class UserJWTControllerIntTest {
 
     @Autowired

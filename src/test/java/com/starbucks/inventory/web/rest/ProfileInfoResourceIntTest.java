@@ -1,7 +1,7 @@
 package com.starbucks.inventory.web.rest;
 
 import io.github.jhipster.config.JHipsterProperties;
-import com.starbucks.inventory.InventoryApp;
+import com.starbucks.inventory.StarbucksApp;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -25,7 +25,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @see ProfileInfoResource
  **/
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = InventoryApp.class)
+@SpringBootTest(classes = StarbucksApp.class)
 public class ProfileInfoResourceIntTest {
 
     @Mock
@@ -39,7 +39,7 @@ public class ProfileInfoResourceIntTest {
     @Before
     public void setup() {
         MockitoAnnotations.initMocks(this);
-        String mockProfile[] = {"test"};
+        String mockProfile[] = { "test" };
         JHipsterProperties.Ribbon ribbon = new JHipsterProperties.Ribbon();
         ribbon.setDisplayOnActiveProfiles(mockProfile);
         when(jHipsterProperties.getRibbon()).thenReturn(ribbon);

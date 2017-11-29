@@ -1,7 +1,7 @@
 {
     "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
     "project": {
-        "name": "inventory"
+        "name": "starbucks"
     },
     "apps": [{
         "root": "src/main/webapp",

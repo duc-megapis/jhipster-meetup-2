@@ -1,5 +1,5 @@
-var dataCacheName = 'Inventory-v1';
-var cacheName = 'Inventory-1';
+var dataCacheName = 'Starbucks-v1';
+var cacheName = 'Starbucks-1';
 var filesToCache = [
     '/',
     '/index.html'

@@ -1,6 +1,6 @@
 package com.starbucks.inventory.repository;
 
-import com.starbucks.inventory.InventoryApp;
+import com.starbucks.inventory.StarbucksApp;
 import com.starbucks.inventory.config.Constants;
 import com.starbucks.inventory.config.audit.AuditEventConverter;
 import com.starbucks.inventory.domain.PersistentAuditEvent;
@@ -32,7 +32,7 @@ import static com.starbucks.inventory.repository.CustomAuditEventRepository.EVEN
  * @see CustomAuditEventRepository
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = InventoryApp.class)
+@SpringBootTest(classes = StarbucksApp.class)
 @Transactional
 public class CustomAuditEventRepositoryIntTest {
 
@@ -192,7 +192,7 @@ public class CustomAuditEventRepositoryIntTest {
         assertThat(persistentAuditEvent.getAuditEventDate()).isEqualTo(event.getTimestamp().toInstant());
     }
 
-   @Test
+    @Test
     public void testAddEventWithWebAuthenticationDetails() {
         HttpSession session = new MockHttpSession(null, "test-session-id");
         MockHttpServletRequest request = new MockHttpServletRequest();

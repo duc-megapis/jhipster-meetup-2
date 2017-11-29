@@ -1,14 +1,14 @@
 version: '2'
 services:
-    inventory-app:
-        image: inventory
+    starbucks-app:
+        image: starbucks
         environment:
             - SPRING_PROFILES_ACTIVE=prod,swagger
-            - SPRING_DATASOURCE_URL=jdbc:mysql://inventory-mysql:3306/inventory?useUnicode=true&characterEncoding=utf8&useSSL=false
+            - SPRING_DATASOURCE_URL=jdbc:mysql://starbucks-mysql:3306/starbucks?useUnicode=true&characterEncoding=utf8&useSSL=false
             - JHIPSTER_SLEEP=10 # gives time for the database to boot before the application
         ports:
             - 8080:8080
-    inventory-mysql:
+    starbucks-mysql:
         extends:
             file: mysql.yml
-            service: inventory-mysql
+            service: starbucks-mysql

@@ -16,14 +16,14 @@
 
 spring:
     application:
-        name: inventory
+        name: starbucks
     jackson:
         serialization.write_dates_as_timestamps: false
     cache:
         type: none
     datasource:
         type: com.zaxxer.hikari.HikariDataSource
-        url: jdbc:h2:mem:inventory;DB_CLOSE_DELAY=-1
+        url: jdbc:h2:mem:starbucks;DB_CLOSE_DELAY=-1
         name:
         username:
         password:
@@ -55,10 +55,6 @@ spring:
 
 liquibase:
     contexts: test
-
-security:
-    basic:
-        enabled: false
 
 server:
     port: 10344
@@ -92,7 +88,7 @@ jhipster:
     security:
         authentication:
             jwt:
-                secret: 2db2069ea3b2dff7d6620b3733796a16ccb63343
+                secret: e1b204edd7bd98a4d1f38e398103232d8bae888d
                 # Token is valid 24 hours
                 token-validity-in-seconds: 86400
     metrics: # DropWizard Metrics configuration, used by MetricsConfiguration

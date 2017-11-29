@@ -1,6 +1,6 @@
 package com.starbucks.inventory.service;
 
-import com.starbucks.inventory.InventoryApp;
+import com.starbucks.inventory.StarbucksApp;
 import com.starbucks.inventory.config.Constants;
 import com.starbucks.inventory.domain.User;
 import com.starbucks.inventory.repository.UserRepository;
@@ -31,7 +31,7 @@ import static org.assertj.core.api.Assertions.assertThat;
  * @see UserService
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = InventoryApp.class)
+@SpringBootTest(classes = StarbucksApp.class)
 @Transactional
 public class UserServiceIntTest {
 

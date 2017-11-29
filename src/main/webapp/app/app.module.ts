@@ -4,12 +4,12 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { Ng2Webstorage } from 'ng2-webstorage';
 
-import { InventorySharedModule, UserRouteAccessService } from './shared';
-import { InventoryHomeModule } from './home/home.module';
-import { InventoryAdminModule } from './admin/admin.module';
-import { InventoryAccountModule } from './account/account.module';
-import { InventoryEntityModule } from './entities/entity.module';
-
+import { StarbucksSharedModule, UserRouteAccessService } from './shared';
+import { StarbucksAppRoutingModule} from './app-routing.module';
+import { StarbucksHomeModule } from './home/home.module';
+import { StarbucksAdminModule } from './admin/admin.module';
+import { StarbucksAccountModule } from './account/account.module';
+import { StarbucksEntityModule } from './entities/entity.module';
 import { customHttpProvider } from './blocks/interceptor/http.provider';
 import { PaginationConfig } from './blocks/config/uib-pagination.config';
 
@@ -17,7 +17,6 @@ import { PaginationConfig } from './blocks/config/uib-pagination.config';
 
 import {
     JhiMainComponent,
-    LayoutRoutingModule,
     NavbarComponent,
     FooterComponent,
     ProfileService,
@@ -29,13 +28,13 @@ import {
 @NgModule({
     imports: [
         BrowserModule,
-        LayoutRoutingModule,
+        StarbucksAppRoutingModule,
         Ng2Webstorage.forRoot({ prefix: 'jhi', separator: '-'}),
-        InventorySharedModule,
-        InventoryHomeModule,
-        InventoryAdminModule,
-        InventoryAccountModule,
-        InventoryEntityModule,
+        StarbucksSharedModule,
+        StarbucksHomeModule,
+        StarbucksAdminModule,
+        StarbucksAccountModule,
+        StarbucksEntityModule,
         // jhipster-needle-angular-add-module JHipster will add new module here
     ],
     declarations: [
@@ -54,4 +53,4 @@ import {
     ],
     bootstrap: [ JhiMainComponent ]
 })
-export class InventoryAppModule {}
+export class StarbucksAppModule {}

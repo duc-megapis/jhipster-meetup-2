@@ -1,7 +1,7 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { InventorySharedModule } from '../shared';
+import { StarbucksSharedModule } from '../shared';
 
 import {
     Register,
@@ -21,8 +21,8 @@ import {
 
 @NgModule({
     imports: [
-        InventorySharedModule,
-        RouterModule.forRoot(accountState, { useHash: true })
+        StarbucksSharedModule,
+        RouterModule.forChild(accountState)
     ],
     declarations: [
         ActivateComponent,
@@ -42,4 +42,4 @@ import {
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class InventoryAccountModule {}
+export class StarbucksAccountModule {}

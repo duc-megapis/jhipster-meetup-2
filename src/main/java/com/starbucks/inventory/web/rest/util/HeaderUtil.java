@@ -3,6 +3,7 @@ package com.starbucks.inventory.web.rest.util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpHeaders;
+
 /**
  * Utility class for HTTP headers creation.
  */
@@ -10,15 +11,15 @@ public final class HeaderUtil {
 
     private static final Logger log = LoggerFactory.getLogger(HeaderUtil.class);
 
-    private static final String APPLICATION_NAME = "inventoryApp";
+    private static final String APPLICATION_NAME = "starbucksApp";
 
     private HeaderUtil() {
     }
 
     public static HttpHeaders createAlert(String message, String param) {
         HttpHeaders headers = new HttpHeaders();
-        headers.add("X-inventoryApp-alert", message);
-        headers.add("X-inventoryApp-params", param);
+        headers.add("X-starbucksApp-alert", message);
+        headers.add("X-starbucksApp-params", param);
         return headers;
     }
 
@@ -37,8 +38,8 @@ public final class HeaderUtil {
     public static HttpHeaders createFailureAlert(String entityName, String errorKey, String defaultMessage) {
         log.error("Entity processing failed, {}", defaultMessage);
         HttpHeaders headers = new HttpHeaders();
-        headers.add("X-inventoryApp-error", "error." + errorKey);
-        headers.add("X-inventoryApp-params", entityName);
+        headers.add("X-starbucksApp-error", "error." + errorKey);
+        headers.add("X-starbucksApp-params", entityName);
         return headers;
     }
 }
