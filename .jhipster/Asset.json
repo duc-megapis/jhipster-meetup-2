@@ -1,0 +1,28 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "cafe",
+            "otherEntityName": "cafe",
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": [
+                "required"
+            ],
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "asset"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20171129193955",
+    "dto": "no",
+    "service": "serviceClass",
+    "entityTableName": "asset",
+    "jpaMetamodelFiltering": false,
+    "pagination": "no"
+}

@@ -1,0 +1,29 @@
+{
+    "cafeManagement": {
+        "home": {
+            "title": "Cafes",
+            "createLabel": "Create a new cafe",
+            "editLabel": "Edit a cafe"
+        },
+        "delete": {
+            "question": "Are you sure you want to delete cafe {{ name }}?"
+        },
+        "detail": {
+            "title": "Cafe"
+        },
+        "createdBy": "Created by",
+        "createdDate": "Created date",
+        "lastModifiedBy": "Modified by",
+        "lastModifiedDate": "Modified date",
+        "cafe": "Cafe",
+        "cafeContact": "Contact",
+        "name": "Name"
+    },
+    "starbucksApp": {
+        "cafe": {
+            "created": "A new cafe is created with identifier {{ param }}",
+            "updated": "A cafe is updated with identifier {{ param }}",
+            "deleted": "A cafe is deleted with identifier {{ param }}"
+        }
+    }
+}

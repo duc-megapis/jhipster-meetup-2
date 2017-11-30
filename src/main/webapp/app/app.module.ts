@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { Ng2Webstorage } from 'ng2-webstorage';
 
-import { StarbucksSharedModule, UserRouteAccessService } from './shared';
+import { StarbucksSharedModule, UserRouteAccessService, CafeRouteAccessService } from './shared';
 import { StarbucksAppRoutingModule} from './app-routing.module';
 import { StarbucksHomeModule } from './home/home.module';
 import { StarbucksAdminModule } from './admin/admin.module';
@@ -47,6 +47,7 @@ import {
     ],
     providers: [
         ProfileService,
+        CafeRouteAccessService,
         customHttpProvider(),
         PaginationConfig,
         UserRouteAccessService

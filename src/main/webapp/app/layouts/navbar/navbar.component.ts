@@ -73,6 +73,9 @@ export class NavbarComponent implements OnInit {
         this.isNavbarCollapsed = !this.isNavbarCollapsed;
     }
 
+    hasCafe() {
+        return this.principal.getCafe() ? true : false;
+    }
     getImageUrl() {
         return this.isAuthenticated() ? this.principal.getImageUrl() : null;
     }

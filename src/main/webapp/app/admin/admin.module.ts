@@ -13,6 +13,12 @@ import {
     UserMgmtDetailComponent,
     UserMgmtDialogComponent,
     UserMgmtDeleteDialogComponent,
+    CafeMgmtComponent,
+    CafeMgmtDetailComponent,
+    CafeMgmtDialogComponent,
+    CafeDialogComponent,
+    CafeDeleteDialogComponent,
+    CafeMgmtDeleteDialogComponent,
     LogsComponent,
     JhiMetricsMonitoringModalComponent,
     JhiMetricsMonitoringComponent,
@@ -27,13 +33,16 @@ import {
     LogsService,
     UserResolvePagingParams,
     UserResolve,
-    UserModalService
+    UserModalService,
+    CafeResolvePagingParams,
+    CafeService,
+    CafeModalService
 } from './';
 
 @NgModule({
     imports: [
         StarbucksSharedModule,
-        RouterModule.forChild(adminState),
+        RouterModule.forRoot(adminState, { useHash: true }),
         /* jhipster-needle-add-admin-module - JHipster will add admin modules here */
     ],
     declarations: [
@@ -44,6 +53,12 @@ import {
         UserMgmtDetailComponent,
         UserMgmtDialogComponent,
         UserMgmtDeleteDialogComponent,
+        CafeMgmtComponent,
+        CafeMgmtDetailComponent,
+        CafeMgmtDialogComponent,
+        CafeDialogComponent,
+        CafeDeleteDialogComponent,
+        CafeMgmtDeleteDialogComponent,
         LogsComponent,
         JhiConfigurationComponent,
         JhiHealthCheckComponent,
@@ -57,6 +72,8 @@ import {
         UserMgmtDeleteDialogComponent,
         JhiHealthModalComponent,
         JhiMetricsMonitoringModalComponent,
+        CafeMgmtDialogComponent,
+        CafeMgmtDeleteDialogComponent
     ],
     providers: [
         AuditsService,
@@ -66,7 +83,10 @@ import {
         LogsService,
         UserResolvePagingParams,
         UserResolve,
-        UserModalService
+        UserModalService,
+        CafeResolvePagingParams,
+        CafeService,
+        CafeModalService
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

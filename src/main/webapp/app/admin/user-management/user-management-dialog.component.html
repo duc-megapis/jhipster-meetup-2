@@ -93,6 +93,14 @@
                 <span jhiTranslate="userManagement.activated">Activated</span>
             </label>
         </div>
+        
+        <div class="form-group" *ngIf="!currentAccount.cafe && cafes && cafes.length > 0">
+            <label jhiTranslate="userManagementCafe">Cafe</label>
+            <select class="form-control" id="cafe" name="cafe" [(ngModel)]="user.cafe">
+                <option [ngValue]="null"></option> 
+                <option [ngValue]="cafe.id === user.cafe?.id ? user.cafe : cafe" *ngFor="let cafe of cafes">{{cafe.name}}</option>
+            </select>
+        </div>
 
         <div class="form-group" *ngIf="languages && languages.length > 0">
             <label jhiTranslate="userManagement.langKey">Lang Key</label>

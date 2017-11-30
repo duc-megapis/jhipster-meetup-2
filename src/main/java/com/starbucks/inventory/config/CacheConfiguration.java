@@ -41,6 +41,9 @@ public class CacheConfiguration {
             cm.createCache(com.starbucks.inventory.domain.User.class.getName(), jcacheConfiguration);
             cm.createCache(com.starbucks.inventory.domain.Authority.class.getName(), jcacheConfiguration);
             cm.createCache(com.starbucks.inventory.domain.User.class.getName() + ".authorities", jcacheConfiguration);
+            cm.createCache(com.starbucks.inventory.domain.Cafe.class.getName(), jcacheConfiguration);
+            cm.createCache(com.starbucks.inventory.domain.Cafe.class.getName() + ".users", jcacheConfiguration);
+            cm.createCache(com.starbucks.inventory.domain.Asset.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }

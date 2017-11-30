@@ -91,6 +91,10 @@ export class Principal {
         return this.authenticationState.asObservable();
     }
 
+    getCafe(): String {
+        return this.isIdentityResolved() ? this.userIdentity.cafe : null;
+    }
+
     getImageUrl(): String {
         return this.isIdentityResolved() ? this.userIdentity.imageUrl : null;
     }
